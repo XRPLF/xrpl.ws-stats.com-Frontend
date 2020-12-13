@@ -5,6 +5,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            animation: {
+                'spin-reverse': 'spin-reverse 1s linear infinite',
+            },
             colors: {
                 'xrpl-ws-blue': '#0033cc',
                 'xrpl-ws-red': '#dc3545',
@@ -17,6 +20,16 @@ module.exports = {
                 'xrpl-ws-green-badge-text': '#155724',
                 'xrpl-ws-green-badge-background': '#d4edda',
 
+            },
+            keyframes: {
+                'spin-reverse': {
+                    from: {
+                        transform: 'rotate(360deg)'
+                    },
+                    to: {
+                        transform: 'rotate(0deg)'
+                    },
+                }
             },
             maxWidth: {
                 '2/3': '66%'
