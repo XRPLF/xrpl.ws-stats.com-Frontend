@@ -1,0 +1,21 @@
+[
+    {
+        "status": "success",
+        "title": "Cluster Operational"
+    },
+    {
+        "status": "success",
+        "title": "Cluster Operational",
+        "subMessage": "There is upcoming maintenance in 1 hour."
+    },
+    {
+        "status": "warn",
+        "title": "Degregated Cluster Performance",
+        "subMessage": "We are currently experiencing some latency for some connections."
+    },
+    {
+        "status": "fail",
+        "title": "Cluster Down",
+        "subMessage": "The cluster is currently not operating."
+    }
+]
