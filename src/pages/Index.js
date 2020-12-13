@@ -31,7 +31,7 @@ export default class Index extends React.Component {
 
     async getEdgeData() {
         let data = await axios
-            .get("https://stats.xrpl.ws/json/edges")
+            .get("https://xrpl.ws-stats.com/json/edges")
             .then(function (response) {
                 return response;
             })
@@ -46,7 +46,7 @@ export default class Index extends React.Component {
 
     async getNodesData() {
         let data = await axios
-            .get("https://stats.xrpl.ws/json/nodes")
+            .get("https://xrpl.ws-stats.com/json/nodes")
             .then(function (response) {
                 return response;
             })
@@ -61,7 +61,7 @@ export default class Index extends React.Component {
 
     async getTrafficData() {
         let data = await axios
-            .get("https://stats.xrpl.ws/json/traffic")
+            .get("https://xrpl.ws-stats.com/json/traffic")
             .then(function (response) {
                 return response;
             })
@@ -76,7 +76,7 @@ export default class Index extends React.Component {
 
     async getEdgeConnectionsData() {
         let data = await axios
-            .get("https://stats.xrpl.ws/json/edge-connections")
+            .get("https://xrpl.ws-stats.com/json/edge-connections")
             .then(function (response) {
                 return response;
             })
@@ -91,7 +91,7 @@ export default class Index extends React.Component {
 
     async getEdgeTrafficData() {
         let data = await axios
-            .get("https://stats.xrpl.ws/json/edge-traffic")
+            .get("https://xrpl.ws-stats.com/json/edge-traffic")
             .then(function (response) {
                 return response;
             })
