@@ -1,4 +1,5 @@
 import React from "react";
+var moment = require('moment');
 
 export default class StatusMessage extends React.Component {
     render () {
@@ -26,13 +27,21 @@ export default class StatusMessage extends React.Component {
             }
 
             if ('subMessage' in message && message.subMessage.length > 0) {
+
+                if ('date' in message) {
+                    let date = moment(message.date, "YYYY-MM-DDTHH:mm:ssZ");
+                    message.subMessage = message.subMessage.replace('{date}', date.format("YYYY-MM-DD HH:mm Z"));
+                }
+
                 subMessage = (<div className="text-base mt-2">{ message.subMessage }</div>);
             } else {
                 subMessage = "";
             }
 
-            return <div key={"message-" + index} className={className + " rounded text-white text-2xl p-6"}>
-                <div className="font-bold">{ message.title }</div>
+            return <div key={"message-" + index} className={className + " rounded text-white p-6"}>
+                <div className="text-2xl font-bold">
+                    { message.title }
+                </div>
                 { subMessage }
             </div>
         });
