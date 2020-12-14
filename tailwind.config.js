@@ -11,8 +11,11 @@ module.exports = {
             colors: {
                 'xrpl-ws-blue': '#0033cc',
                 'xrpl-ws-red': '#dc3545',
+                'xrpl-ws-red-secondary': '#FCA5A5',
                 'xrpl-ws-orange': '#ffc107',
+                'xrpl-ws-orange-secondary': '#FCD34D',
                 'xrpl-ws-green': '#28a745',
+                'xrpl-ws-green-secondary': '#6EE7B7',
                 'xrpl-ws-cta': '#15db95',
                 'xrpl-ws-cta-hover': '#0e9566',
                 'xrpl-ws-yellow-badge-text': '#856404',

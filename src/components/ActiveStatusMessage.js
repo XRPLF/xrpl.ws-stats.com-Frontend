@@ -6,11 +6,13 @@ export default class StatusMessage extends React.Component {
         let subMessage = "";
         let data = this.props.data;
 
-        if (data === undefined || data.length === 0) {
+        if (!("active" in data) || data.active.length === 0) {
             data = [{
                 status: 'success',
                 title: 'Cluster Operational'
             }];
+        } else {
+            data = this.props.data.active;
         }
 
         let rows = data.map((message, index) => {

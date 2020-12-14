@@ -1,10 +1,11 @@
 import React from 'react';
 import axios from "axios";
+import ActiveStatusMessage from '../components/ActiveStatusMessage';
 import BadgeList from '../components/BadgeList';
-import Top20CountryList from '../components/Top20CountryList';
 import EdgeTraffic from '../components/EdgeTraffic';
 import NodeList from '../components/NodeList';
-import StatusMessage from '../components/StatusMessage';
+import PastStatusMessage from '../components/PastStatusMessage';
+import Top20CountryList from '../components/Top20CountryList';
 import TrafficGraph from '../components/TrafficGraph';
 
 export default class Index extends React.Component {
@@ -167,8 +168,10 @@ export default class Index extends React.Component {
                         </div>
 
                         <div className="space-y-4 mt-4">
-                            <StatusMessage data={this.state.statusMessage} />
+                            <ActiveStatusMessage data={this.state.statusMessage} />
                         </div>
+
+                        <PastStatusMessage data={this.state.statusMessage} />
                     </div>
                 </div>
 
