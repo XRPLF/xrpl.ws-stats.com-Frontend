@@ -26,7 +26,7 @@ export default function App() {
                     <div className="mt-8 md:mt-0 md:order-1">
                         <p className="text-center text-base text-gray-400">
                             <small>Dashboard by <a href="https://robertswarthout.com" className="underline">Robert Swarthout</a></small>
-                            <small className="ml-3">Open data from <a href="https://xrpl.ws-status.com" className="underline">xrpl.ws-status.com</a></small>
+                            <small className="ml-3">Open data from <a href="https://xrpl.ws-stats.com" className="underline">xrpl.ws-stats.com</a></small>
                         </p>
                     </div>
                 </div>
