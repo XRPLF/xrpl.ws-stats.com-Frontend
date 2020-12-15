@@ -6,12 +6,5 @@
     }
   ],
   "past": [
-    {
-      "status": "warn",
-      "title": "Degregated Cluster Performance",
-      "subMessage": "Temporary, incidental increased latency for some connections.",
-      "start": "2020-12-12T22:10:00Z",
-      "end": "2020-12-14222:40:00Z"
-    }
   ]
 }
