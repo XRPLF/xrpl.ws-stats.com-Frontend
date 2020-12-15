@@ -1,47 +1,10 @@
 {
-    "active": [
-        {
-            "status": "success",
-            "title": "Cluster Operational"
-        },
-        {
-            "status": "success",
-            "title": "Cluster Operational",
-            "subMessage": "There is upcoming maintenance at {date}.",
-            "date": "2020-12-14T01:30:00Z"
-        },
-        {
-            "status": "warn",
-            "title": "Degregated Cluster Performance",
-            "subMessage": "We are currently experiencing some latency for some connections."
-        },
-        {
-            "status": "fail",
-            "title": "Cluster Down",
-            "subMessage": "The cluster is currently not operating."
-        }
-    ],
-    "past": [
-        {
-            "status": "success",
-            "title": "Cluster Operational",
-            "subMessage": "There is upcoming maintenance in 1 hour.",
-            "start": "2020-02-22T03:30:00Z",
-            "end": "2020-02-22T03:34:00Z"
-        },
-        {
-            "status": "warn",
-            "title": "Degregated Cluster Performance",
-            "subMessage": "We are currently experiencing some latency for some connections.",
-            "start": "2020-07-12T16:32:00Z",
-            "end": "2020-07-12T16:39:00Z"
-        },
-        {
-            "status": "fail",
-            "title": "Cluster Down",
-            "subMessage": "The cluster is currently not operating.",
-            "start": "2020-11-02T22:12:00Z",
-            "end": "2020-11-02T23:05:00Z"
-        }
-    ]
+  "active": [
+    {
+      "status": "success",
+      "title": "Cluster Operational"
+    }
+  ],
+  "past": [
+  ]
 }
