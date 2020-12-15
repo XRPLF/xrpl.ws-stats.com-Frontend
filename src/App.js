@@ -25,7 +25,8 @@ export default function App() {
                     </div>
                     <div className="mt-8 md:mt-0 md:order-1">
                         <p className="text-center text-base text-gray-400">
-                            Built by <a href="https://robertswarthout.com" className="underline">Robert Swarthout</a>
+                            Dashboard by <a href="https://robertswarthout.com" className="underline">Robert Swarthout</a>
+                            Open data from <a href="https://xrpl.ws-status.com" className="underline">xrpl.ws-status.com</a>
                         </p>
                     </div>
                 </div>
