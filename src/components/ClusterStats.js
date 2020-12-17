@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import BadgeList from '../components/BadgeList';
 import EdgeTraffic from '../components/EdgeTraffic';
+import MissingDTagTransactions from '../components/MissingDTagTransactions';
 import NodeList from '../components/NodeList';
 import Top20CountryList from '../components/Top20CountryList';
 import TrafficGraph from '../components/TrafficGraph';
@@ -16,6 +17,7 @@ export default class SimpleNodeList extends React.Component {
         this.getTrafficData = this.getTrafficData.bind(this);
         this.getEdgeConnectionsData = this.getEdgeConnectionsData.bind(this);
         this.getEdgeTrafficData = this.getEdgeTrafficData.bind(this);
+        this.getMissingDTagWalletsData = this.getMissingDTagWalletsData.bind(this);
     }
 
     componentDidMount() {
@@ -24,6 +26,7 @@ export default class SimpleNodeList extends React.Component {
         this.getTrafficData();
         this.getEdgeConnectionsData();
         this.getEdgeTrafficData();
+        this.getMissingDTagWalletsData();
     }
 
     async getEdgeData() {
@@ -111,9 +114,27 @@ export default class SimpleNodeList extends React.Component {
         }
     }
 
+    async getMissingDTagWalletsData() {
+        let data = await axios
+            .get("https://xrpl.ws-stats.com/json/filtered")
+            .then(function (response) {
+                return response;
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+
+        if (data !== undefined) {
+            this.setState({
+                missingDTagWallets: data.data
+            });
+        }
+    }
+
     render () {
 
-        if (!this.state.edgeTraffic ||
+        if (!this.state.missingDTagWallets ||
+            !this.state.edgeTraffic ||
             !this.state.edgeConnections ||
             !this.state.traffic ||
             !this.state.nodes ||
@@ -245,6 +266,19 @@ export default class SimpleNodeList extends React.Component {
                         <TrafficGraph data={this.state.traffic} />
                     </div>
                 </div>
+
+                <div className="text-4xl font-bold text-center text-gray-900 mt-16">Missing Destination Tag</div>
+                <div className="text-base mt-6 px-2 text-center text-gray-800">The destination addresses listed below are addresses that <span className="font-bold italic">should</span> have <span className="bg-gray-200 text-gray-500 inline-block rounded p-1">RequireDest</span> <a href="https://xrpl.org/require-destination-tags.html" className="underline">set on the account</a>. By setting <span className="bg-gray-200 text-gray-500 inline-block rounded p-1">RequireDest</span> on the account, the exchange would be ensuring that users sending XRP will have it credited to their account. If you are an exchange, this means less support and happier clients!</div>
+                <div className="flex flex-col mt-6 px-2">
+                    <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                        <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                            <div className="shadow overflow-hidden border-b border-gray-200 rounded-lg">
+                                <MissingDTagTransactions data={this.state.missingDTagWallets} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         );
     }
