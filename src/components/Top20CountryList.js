@@ -17,8 +17,8 @@ export default class Top20CountryList extends React.Component {
                             countryCode={key}
                             svg
                             style={{
-                                width: '3em',
-                                height: 'auto'
+                                width: '48px',
+                                height: '36px'
                             }}
                             className="flex-none"
                             title={key}
