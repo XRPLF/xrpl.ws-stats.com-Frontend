@@ -208,30 +208,6 @@ export default class SimpleNodeList extends React.Component {
                     </div>
                 </div>
 
-                <div className="text-4xl font-bold text-center text-gray-900 mt-16">Edge Connections &amp; Bandwidth</div>
-
-                <div className="flex flex-col mt-6 px-2">
-                    <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                        <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                            <div className="shadow overflow-hidden border-b border-gray-200 rounded-lg">
-                                <EdgeTraffic data={this.state.edgeTraffic} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="text-4xl font-bold text-center text-gray-900 mt-16">Full-History Nodes</div>
-
-                <div className="flex flex-col mt-6">
-                    <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                        <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                            <div className="shadow overflow-hidden border-b border-gray-200 rounded-lg">
-                                <NodeList data={this.state.nodes} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div className="text-4xl font-bold text-center text-gray-900 mt-16">30-Day Cluster Stats</div>
 
                 <dl className="rounded-lg bg-white shadow grid grid-cols-1 lg:grid-cols-3 mt-6">
@@ -264,6 +240,30 @@ export default class SimpleNodeList extends React.Component {
                 <div className="bg-white overflow-hidden shadow rounded-lg mt-6 px-2">
                     <div className="px-4 py-5 sm:p-6">
                         <TrafficGraph data={this.state.traffic} />
+                    </div>
+                </div>
+
+                <div className="text-4xl font-bold text-center text-gray-900 mt-16">Edge Connections &amp; Bandwidth</div>
+
+                <div className="flex flex-col mt-6 px-2">
+                    <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                        <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                            <div className="shadow overflow-hidden border-b border-gray-200 rounded-lg">
+                                <EdgeTraffic data={this.state.edgeTraffic} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="text-4xl font-bold text-center text-gray-900 mt-16">Full-History Nodes</div>
+
+                <div className="flex flex-col mt-6">
+                    <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                        <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                            <div className="shadow overflow-hidden border-b border-gray-200 rounded-lg">
+                                <NodeList data={this.state.nodes} />
+                            </div>
+                        </div>
                     </div>
                 </div>
 
