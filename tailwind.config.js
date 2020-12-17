@@ -35,7 +35,9 @@ module.exports = {
                 }
             },
             maxWidth: {
-                '2/3': '66%'
+                '2/3': '66%',
+                '15ch': '15ch',
+                '25ch': '25ch'
             }
         },
         fontFamily: {
