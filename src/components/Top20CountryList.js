@@ -12,13 +12,13 @@ export default class Top20CountryList extends React.Component {
 
             cards.push(
                 <div key={"country-" + index} className="py-4 px-2">
-                    <div className="flex overflow-hidden rounded-lg bg-gray-50 shadow border-b border-gray-200">
+                    <div className="flex overflow-hidden h-8 rounded-lg bg-gray-50 shadow border-b border-gray-200">
                         <ReactCountryFlag
                             countryCode={key}
                             svg
                             style={{
-                                width: '3em',
-                                height: 'auto'
+                                width: 'auto',
+                                height: 'inherit'
                             }}
                             className="flex-none"
                             title={key}
