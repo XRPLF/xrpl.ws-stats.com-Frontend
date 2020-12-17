@@ -163,7 +163,7 @@ export default class SimpleNodeList extends React.Component {
                 return this.state.nodes[k].code;
             }
             return k;
-        });
+        }).sort();
 
         return (
             <div>
