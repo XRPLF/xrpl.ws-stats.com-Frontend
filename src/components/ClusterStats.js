@@ -273,7 +273,13 @@ export default class SimpleNodeList extends React.Component {
                 </div>
 
                 <div className="text-4xl font-bold text-center text-gray-900 mt-16">Missing Destination Tag</div>
-                <div className="text-base mt-6 px-2 text-center text-gray-800">The destination addresses listed below are addresses that <span className="font-bold italic">should</span> have <span className="bg-gray-200 text-gray-500 inline-block rounded p-1">RequireDest</span> <a href="https://xrpl.org/require-destination-tags.html" className="underline">set on the account</a>. By setting <span className="bg-gray-200 text-gray-500 inline-block rounded p-1">RequireDest</span> on the account, the exchange would be ensuring that users sending XRP will have it credited to their account. If you are an exchange, this means less support and happier clients!</div>
+                <div className="text-base mt-6 px-2 text-center text-gray-800">
+                        The destination addresses listed below are addresses that <span className="font-bold italic">should</span>
+                        have <span className="bg-gray-200 text-gray-500 inline-block rounded p-1">RequireDest</span>
+                        <a href="https://xrpl.org/require-destination-tags.html" className="underline">set on the account</a>.
+                        By setting <span className="bg-gray-200 text-gray-500 inline-block rounded p-1">RequireDest</span> on the account,
+                        the exchange would be ensuring that users sending XRP will have it credited to their account. If you are an exchange,
+                        this means less support requests and happier clients!</div>
                 <div className="flex flex-col mt-6 px-2">
                     <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                         <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
