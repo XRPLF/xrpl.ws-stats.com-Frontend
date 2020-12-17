@@ -158,7 +158,12 @@ export default class SimpleNodeList extends React.Component {
             }
         }
 
-        let nodes = Object.keys(this.state.nodes);
+        let nodes = Object.keys(this.state.nodes).map(k => {
+            if (typeof this.state.nodes[k].code !== 'undefined') {
+                return this.state.nodes[k].code;
+            }
+            return k;
+        });
 
         return (
             <div>
