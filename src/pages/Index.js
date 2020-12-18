@@ -51,7 +51,7 @@ export default class Index extends React.Component {
                         <div className="flex">
                             <div className="flex-grow md:max-w-2/3">
                                 <div className="text-xl text-white">
-                                    <a href="https://xrpl.ws" target="_blank"><span className="font-bold">wss://xrpl.ws</span> <span className="block md:inline text-base"># XRPL Full History Cluster</span></a>
+                                    <a href="https://xrpl.ws" target="_blank"><span className="font-bold">wss://xrpl.ws</span> <span className="block md:inline text-base"># XRPL Full History &amp; tx submission Cluster</span></a>
                                 </div>
                                 <div className="text-sm text-white mt-6">
                                     The stats shown on this page are from the XRPL.ws full-history cluster. For more information on how to access this community-sponsored resource please visit <a href="https://xrpl.ws/" className="underline">XRPL.ws</a>.
