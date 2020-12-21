@@ -8,6 +8,7 @@ export default class MissingDTagTransactions extends React.Component {
         let rows = [];
         let index = 0;
         let accounts = this.props.data.dtag_accounts_without_flag.details;
+        accounts = accounts.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
         for (let key in accounts) {
 
