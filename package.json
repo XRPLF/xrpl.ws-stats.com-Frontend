@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build:dev": "webpack --mode development",
+    "build:dev": "export NODE_ENV=development && webpack --mode development",
     "build:prod": "webpack --mode production"
   },
   "dependencies": {
@@ -28,6 +28,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.3.0",
     "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "html-webpack-skip-assets-plugin": "^0.0.2",
     "mini-css-extract-plugin": "^1.3.0",

@@ -23,7 +23,22 @@ module.exports = {
                 }
             },
             {
-                test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                loader: 'file-loader',
+                options: {
+                    name(resourcePath, resourceQuery) {
+                        if (process.env.NODE_ENV === 'development') {
+                            return '[name].[ext]';
+                        }
+
+                        return '[contenthash].[ext]';
+                    },
+                    outputPath: 'assets/img',
+                    publicPath: '/assets/img',
+                },
+            },
+            {
+                test: /\.(eot|ttf|woff|woff2)$/i,
                 loader: 'url-loader',
                 options: {
                     limit: 8192,
@@ -54,7 +69,6 @@ module.exports = {
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
-                { from: 'src/assets/svg', to: 'assets/svg' },
                 { from: 'src/assets/api', to: 'api' },
                 { from: 'src/favicon.ico', to: '' },
             ]

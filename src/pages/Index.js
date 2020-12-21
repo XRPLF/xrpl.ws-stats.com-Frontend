@@ -3,6 +3,7 @@ import axios from "axios";
 import ActiveStatusMessage from '../components/ActiveStatusMessage';
 import ClusterStats from '../components/ClusterStats';
 import PastStatusMessage from '../components/PastStatusMessage';
+import clusterLogo from '../assets/svg/cluster.svg';
 
 export default class Index extends React.Component {
 
@@ -58,7 +59,7 @@ export default class Index extends React.Component {
                                 </div>
                             </div>
                             <div className="flex-grow-0 hidden md:block md:w-1/3 -mt-14 mr-10">
-                                <img src="/assets/svg/cluster.svg" className="max-w-full max-y-full" />
+                                <img src={clusterLogo} className="max-w-full max-y-full" />
                             </div>
                         </div>
 
