@@ -4,7 +4,6 @@ import BadgeList from '../components/BadgeList';
 import EdgeTraffic from '../components/EdgeTraffic';
 import MissingDTagTransactions from '../components/MissingDTagTransactions';
 import NodeList from '../components/NodeList';
-import PreventedScam from '../components/PreventedScam';
 import Top20CountryList from '../components/Top20CountryList';
 import TrafficGraph from '../components/TrafficGraph';
 
