@@ -1,4 +1,5 @@
-# XRPL.ws Stats Frontend
+# XRPL.ws Stats Frontend [![Netlify Status](https://api.netlify.com/api/v1/badges/f38a7cb0-aa7e-4737-ba58-6b7f37c0db74/deploy-status)](https://app.netlify.com/sites/xrpl-ws-stats-frontend/deploys)
+
 This repo is a frontend [ws-stats.com](https://ws-stats.com) to visualize the data generated from the [XRPL.ws](https://xrpl.ws) cluster. The JSON data used to power this page can be found at [xrpl.ws-stats.com](https://xrpl.ws-stats.com).
 
 ## To build this repo yourself
